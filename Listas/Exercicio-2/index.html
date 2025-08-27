@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3</title>
+</head>
+<body>
+    <p id="texto1">Santos FC!</p>
+    <ul id="list">
+        <li>Neymar Jr</li>
+        <li>Diego Pituca</li>
+    </ul>
+    <p id="paragrafo">Parágrafo Teste</p>
+    <p id="texto2">Tottenham Hotspurs</p>
+    <h2 id="titulo">Teste Cor</h2>
+    <button onclick="document.getElementById('texto1').textContent='Texto alterado com JS!'">Trocar o Texto</button>
+    <button onclick="document.body.style.backgroundColor='blue'">Trocar o Fundo</button>
+    <button onclick="document.getElementById('list').innerHTML += '<li>Novo Jogador</li>'">Adicionar Jogador</button>
+    <button onclick="document.getElementById('paragrafo').remove()">Remover Parágrafo</button>
+    <button onclick="
+    document.getElementById('texto2').style.color='blue';
+    document.getElementById('texto2').style.fontSize='20px';
+    document.getElementById('titulo').style.color='green';
+    document.getElementById('titulo').style.fontSize='35px';">
+    Trocar Texto</button>
+    <br>
+    <input type="text" id="digitar" placeholder="Digite aqui..." style="margin-top: 10px;">
+    <p id="saida"></p>
+    <p id="passarmouse">Mudar o texto ao passar o mouse</p>
+    <p id="elemento">Vai sumir ao dar duplo clique</p>
+    <button ondblclick="document.getElementById('elemento').style.display='none'">Duplo Clique</button>
+<p id="meuTexto">Texto para trocar fonte</p>
+<button id="botaoAlterar">Alterar fonte</button>
+<script src="index.js"></script>
+</body>
+</html>

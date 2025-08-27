@@ -1,2 +1,179 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+// função
+
+
+
+// ex1:
+
+
+
+
+
+function saudacao(){
+
+
+    console.log("Salvee")
+
+
+}
+
+
+saudacao()
+
+
+
+
+
+// ex2:
+
+
+
+
+
+function ex2(nome){
+
+
+    console.log("Olá " + nome)
+
+
+}
+
+
+ex2("André")
+
+
+
+
+
+// ex3:
+
+
+
+
+
+let ex3 = function() {
+
+
+    console.log("Nascer, viver, e no Santos morrer!");
+
+
+}
+
+
+ex3();
+
+
+
+
+
+// ex4:
+
+
+
+
+
+const ex4 = (x,y) => {
+
+
+    return x * y
+
+
+}
+
+
+console.log(ex4(15,15))
+
+
+
+
+
+// eventos
+
+
+
+
+
+// ex1:
+
+
+let digitar = document.getElementById('digitar')
+
+
+let saida = document.getElementById('saida')
+
+
+
+
+
+digitar.addEventListener('input', () => {
+
+
+  saida.textContent = digitar.value;
+
+
+})
+
+
+
+
+
+// ex2:
+
+
+
+
+
+const texto = document.getElementById('passarmouse')
+
+
+
+
+
+texto.addEventListener('mouseover', () => {
+
+
+  texto.textContent = "SANTOSSS";
+
+
+})
+
+
+
+
+
+texto.addEventListener('mouseout', () => {
+
+
+  texto.textContent = "Mudar o texto ao passar o mouse"
+
+
+})
+
+
+
+
+
+// ex3:
+
+
+
+
+
+const botao = document.getElementById('botaoAlterar')
+
+
+const fonte = document.getElementById('meuTexto')
+
+
+
+
+
+botao.addEventListener('click', () => {
+
+
+  const tamanhoAleatorio = Math.floor(Math.random() * (40 - 10 + 1)) + 10; // 10 a 40
+
+
+  fonte.style.fontSize = tamanhoAleatorio + "px"
+
+
+})
