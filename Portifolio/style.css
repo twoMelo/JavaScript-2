@@ -1,0 +1,68 @@
+:root {
+    --primary: 210, 98%, 48%;
+    --foreground: 210, 11%, 15%;
+    --muted-foreground: 210, 4%, 46%;
+    --background: 210, 20%, 98%;
+    --accent: 210, 40%, 93%;
+    --border: 210, 36%, 89%;
+    --secondary: 210, 40%, 96%;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(280 60% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    color: hsl(var(--primary));
+}
+
+.navbar-backdrop {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--background) / 0.8);
+}
+
+.skill-icon {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.1);
+}
