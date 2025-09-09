@@ -3,121 +3,603 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Murilo Melo</title>
+    <title>Portfólio - Desenvolvedor Frontend</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 border-b border-gray-200 navbar-backdrop">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="font-bold text-xl" style="color: hsl(var(--primary))">
-                    Portfólio
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home">Início</a>
-                        <a href="#about">Sobre</a>
-                        <a href="#skills">Habilidades</a>
-                        <a href="#projects">Projetos</a>
-                        <a href="#contact">Contato</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="p-2">
-                        <i data-lucide="menu" class="h-5 w-5"></i>
-                    </button>
-                </div>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">Portfolio</span>
             </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2">Início</a>
-                <a href="#about" class="block px-3 py-2">Sobre</a>
-                <a href="#skills" class="block px-3 py-2">Habilidades</a>
-                <a href="#projects" class="block px-3 py-2">Projetos</a>
-                <a href="#contact" class="block px-3 py-2">Contato</a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projetos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contato</a>
+                </li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-        <div class="max-w-4xl mx-auto text-center fade-in">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                Olá, eu sou <span class="gradient-text">Murilo Melo</span>
-            </h1>
-            <p class="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Desenvolvedor Full Stack apaixonado por criar experiências digitais incríveis e soluções inovadoras.
-            </p>
-            <div class="flex justify-center space-x-6 mb-12">
-                <a href="https://github.com/twoMelo" target="_blank" class="social-link text-2xl text-gray-600">
-                    <i data-lucide="github" class="h-6 w-6"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="social-link text-2xl text-gray-600">
-                    <i data-lucide="linkedin" class="h-6 w-6"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" class="social-link text-2xl text-gray-600">
-                    <i data-lucide="twitter" class="h-6 w-6"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="social-link text-2xl text-gray-600">
-                    <i data-lucide="instagram" class="h-6 w-6"></i>
-                </a>
-            </div>
-            <div class="space-x-4">
-                <a href="#projects" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg">
-                    Ver Projetos
-                    <i data-lucide="arrow-down" class="ml-2 h-4 w-4"></i>
-                </a>
-                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg">
-                    Entre em Contato
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8" style="background: hsl(var(--secondary) / 0.3)">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Sobre Mim</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
-                <div>
-                    <div class="bg-gray-200 rounded-2xl p-8 text-center">
-                        <div class="w-48 h-48 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <i data-lucide="user" class="h-20 w-20 text-gray-500"></i>
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">João Silva</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Desenvolvedor Frontend & UI/UX Designer
+                    </h2>
+                    <p class="hero-description">
+                        Especialista em criar experiências digitais modernas e intuitivas, 
+                        transformando ideias em interfaces elegantes e funcionais.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i data-lucide="code"></i>
+                            Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i data-lucide="mail"></i>
+                            Contato
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <i data-lucide="code-2"></i>
                         </div>
-                        <p class="text-sm text-gray-600">Foto Profissional</p>
+                        <div class="floating-card card-2">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i data-lucide="monitor"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Sou um desenvolvedor apaixonado por tecnologia com mais de 5 anos de experiência em desenvolvimento web. 
-                        Especializado em React, Node.js e tecnologias modernas, sempre buscando aprender e evoluir.
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-text">Role para baixo</div>
+                <div class="scroll-arrow">
+                    <i data-lucide="chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title gradient-text">Sobre Mim</h2>
+                <p class="section-subtitle">
+                    Conheça minha trajetória e paixão por desenvolvimento
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image fade-in">
+                    <div class="image-container">
+                        <div class="profile-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="user"></i>
+                            </div>
+                        </div>
+                        <div class="image-decoration">
+                            <div class="decoration-1"></div>
+                            <div class="decoration-2"></div>
+                            <div class="decoration-3"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text fade-in">
+                    <h3 class="about-title">
+                        Desenvolvedor apaixonado por criar experiências únicas
+                    </h3>
+                    <p class="about-description">
+                        Com mais de 5 anos de experiência em desenvolvimento frontend, 
+                        tenho trabalhado com as mais diversas tecnologias e frameworks 
+                        modernos. Minha paixão está em transformar designs complexos 
+                        em código limpo e eficiente.
                     </p>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Minha jornada começou com curiosidade sobre como as coisas funcionam na web, e hoje trabalho criando 
-                        soluções escaláveis e experiências de usuário excepcionais para empresas de diversos segmentos.
+                    <p class="about-description">
+                        Especializo-me em React, Vue.js, TypeScript e no ecossistema 
+                        JavaScript moderno. Sempre busco as melhores práticas de 
+                        desenvolvimento e me mantenho atualizado com as últimas 
+                        tendências da área.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="px-4 py-2 bg-gray-200 rounded-full text-sm font-medium">React</span>
-                        <span class="px-4 py-2 bg-gray-200 rounded-full text-sm font-medium">Node.js</span>
-                        <span class="px-4 py-2 bg-gray-200 rounded-full text-sm font-medium">TypeScript</span>
-                        <span class="px-4 py-2 bg-gray-200 rounded-full text-sm font-medium">MongoDB</span>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">50+</div>
+                            <div class="stat-label">Projetos Concluídos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">5+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number gradient-text">30+</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-skills-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">CSS3</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills, Projects, Contact e Footer permanecem iguais -->
+    <!-- Seção Habilidades -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title gradient-text">Habilidades</h2>
+                <p class="section-subtitle">
+                    Tecnologias e ferramentas que domino
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card fade-in" data-delay="100">
+                    <div class="skill-icon">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <p class="skill-description">
+                        Desenvolvimento de interfaces modernas e responsivas
+                    </p>
+                    <div class="skill-technologies">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>Angular</span>
+                        <span>Next.js</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in" data-delay="200">
+                    <div class="skill-icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="skill-title">UI/UX Design</h3>
+                    <p class="skill-description">
+                        Design de interfaces intuitivas e experiências memoráveis
+                    </p>
+                    <div class="skill-technologies">
+                        <span>Figma</span>
+                        <span>Adobe XD</span>
+                        <span>Sketch</span>
+                        <span>Prototyping</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in" data-delay="300">
+                    <div class="skill-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+                    <h3 class="skill-title">Backend Development</h3>
+                    <p class="skill-description">
+                        Desenvolvimento de APIs robustas e escaláveis
+                    </p>
+                    <div class="skill-technologies">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in" data-delay="400">
+                    <div class="skill-icon">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+                    <h3 class="skill-title">Mobile Development</h3>
+                    <p class="skill-description">
+                        Aplicações móveis nativas e híbridas
+                    </p>
+                    <div class="skill-technologies">
+                        <span>React Native</span>
+                        <span>Flutter</span>
+                        <span>Ionic</span>
+                        <span>PWA</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in" data-delay="500">
+                    <div class="skill-icon">
+                        <i data-lucide="cloud"></i>
+                    </div>
+                    <h3 class="skill-title">Cloud & DevOps</h3>
+                    <p class="skill-description">
+                        Deploy e gerenciamento de aplicações na nuvem
+                    </p>
+                    <div class="skill-technologies">
+                        <span>AWS</span>
+                        <span>Docker</span>
+                        <span>Vercel</span>
+                        <span>Netlify</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card fade-in" data-delay="600">
+                    <div class="skill-icon">
+                        <i data-lucide="git-branch"></i>
+                    </div>
+                    <h3 class="skill-title">Version Control</h3>
+                    <p class="skill-description">
+                        Controle de versão e colaboração em equipe
+                    </p>
+                    <div class="skill-technologies">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>GitLab</span>
+                        <span>Bitbucket</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title gradient-text">Projetos</h2>
+                <p class="section-subtitle">
+                    Alguns dos meus trabalhos mais recentes
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in" data-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="monitor"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Dashboard</h3>
+                        <p class="project-description">
+                            Dashboard administrativo completo para e-commerce com 
+                            análise de vendas, gestão de produtos e relatórios em tempo real.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Material-UI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-delay="200">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">App de Delivery</h3>
+                        <p class="project-description">
+                            Aplicativo móvel para delivery de comida com interface 
+                            intuitiva, sistema de pagamento e rastreamento em tempo real.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-delay="300">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="figma"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="palette"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema Bancário</h3>
+                        <p class="project-description">
+                            Interface para sistema bancário digital com foco em 
+                            usabilidade, segurança e experiência do usuário.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Vuex</span>
+                            <span class="tech-tag">SCSS</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-delay="400">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="book"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Plataforma de Cursos</h3>
+                        <p class="project-description">
+                            Plataforma educacional completa com sistema de vídeos, 
+                            quizzes, certificados e acompanhamento de progresso.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-delay="500">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Gerenciador de Tarefas</h3>
+                        <p class="project-description">
+                            Aplicação para gestão de projetos e tarefas em equipe 
+                            com colaboração em tempo real e notificações.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">RxJS</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in" data-delay="600">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank">
+                                    <i data-lucide="github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech-icon">
+                            <i data-lucide="shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Marketplace</h3>
+                        <p class="project-description">
+                            Marketplace completo com múltiplos vendedores, 
+                            sistema de avaliações e integração com gateways de pagamento.
+                        </p>
+                        <div class="project-technologies">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux Toolkit</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title gradient-text">Contato</h2>
+                <p class="section-subtitle">
+                    Vamos trabalhar juntos? Entre em contato comigo
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>joao.silva@email.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 99999-9999</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localização</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i data-lucide="linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>/in/joao-silva-dev</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <form id="contact-form" class="form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i data-lucide="send"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    
+                    <div id="form-message" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 João Silva. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#projects">Projetos</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
